@@ -1,0 +1,39 @@
+<div class="cont">
+<!--   <table class="tbsearch"><tr class="trsearch">
+    <td>
+      <div class="consearch">
+      <input type="text"  (keyup)="search()" class="inputsearch" placeholder="Escribe aqui" [formControl]="input" minlength="1" maxlength="30">
+      <div class="btnsearch" (click)="deleteinputsarch()" matRipple><mat-icon class="btniconsearch">clear</mat-icon></div>
+      </div>
+    </td>
+    <td class="tdaling"><button  (click)="search()" mat-button class="btnsearch2">Buscar</button></td>
+  </tr></table> -->
+  <div class="contable">
+    <table class="tbitems1">
+      <tr class="tritems11">
+          <td class="tditems11">Foto</td>
+          <td class="tditems11">Nombre</td>
+          <td class="tditems11">Rol</td>
+          <td class="tditems11">Email</td>
+          <td class="tditems11">Contraseña</td>
+          <td class="tditems11">Password</td>
+          <td class="tditems11"></td>
+      </tr> 
+      <tr class="tritems12" *ngFor="let x of arrUsersGen">
+          <td class="tditems12"><img class="peoplefile" src="{{x.st_ft_perfil}}"></td>
+          <td class="tditems12"><input type="text" id="usname-{{x.id}}" class="inputedit" [value]="x.st_user_name"></td>
+          <td class="tditems12"> <input type="text" id="usrol-{{x.id}}"  class="inputedit" [value]="x.st_user_rol" > </td>
+          <td class="tditems12"> <input type="text" id="usmail-{{x.id}}" class="inputedit" [value]="x.st_email"    > </td>
+          <td class="tditems12"> <input type="password" id="passw-{{x.id}}" class="inputedit" [value]="x.st_password_user"></td>
+          <td class="tditems12"> {{x.st_fcrea_user | date: 'short' }} </td>
+          <td class="tditems13">
+            <button mat-icon-button class="btniconsett"><span class="material-icons iconsettings"  (click)="getUserEditAsign( x.st_user_name, x.st_email, x.st_user_rol ); aud( 'Asignador de carpetas a: ' +  x.st_user_name +' '+ x.st_email+' '+x.st_user_rol ) ">folder</span></button>
+            <button mat-icon-button class="btniconsett"><span class="material-icons iconsettings" (click)="aud( 'Editar ususario: ID: ' + x.id +' US.: '+ x.st_user_name +' MAIL: '+ x.st_email+' ROL: '+x.st_user_rol+' PWD.: '+x.st_password_user);
+              editUsers(x.id, x.st_codec_user, x.st_user_name, x.st_user_rol, x.st_email, x.st_tipo, x.st_ft_perfil, x.st_password_user )">edit</span></button>
+            <button mat-icon-button class="btniconsett" (click)="delUsers(x.id); aud( 'Eliminar ususario: ID: ' + x.id +' US.: '+ x.st_user_name +' MAIL: '+ x.st_email+' ROL: '+x.st_user_rol)"><span class="material-icons iconsettings">clear</span></button>
+          </td>
+      </tr>
+      </table>
+  </div>
+   <button mat-fab (click)="adduser()" aria-label="Example icon button with a delete icon" class="adduserbtn"><mat-icon>person_add</mat-icon></button>
+</div>

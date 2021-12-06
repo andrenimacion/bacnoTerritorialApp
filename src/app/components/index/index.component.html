@@ -1,0 +1,40 @@
+<mat-drawer-container class="cont" autosize>
+    <mat-drawer #drawer class="slidernav" mode="side">
+        <div class="divheeder">
+            <img src="https://www.pngrepo.com/png/226113/512/folder-files-and-folders.png" class="logo">
+            <div class="textlogo">Banco Territorial</div>
+        </div>
+        <div class="divitemsm">
+            <div class="itemsm" *ngFor="let item of arramenu" (click)="redireto(item.icon_module)" id="div{{item.icon_module}}">
+                <span class="material-icons iconitemsm"  id="icon{{item.icon_module}}">{{item.icon_module}} </span>
+                <div class="textitemm"  id="text{{item.icon_module}}">{{item.name_module}}</div>
+            </div>
+        </div> 
+    </mat-drawer>
+    <div class="subcont">
+        <div class="menuho">
+            <div class="tdoneser"><button mat-icon-button (click)="drawer.toggle();changeicon()" class="btnmenuleft" aria-label="Example icon button with a vertical three dot icon"><mat-icon>{{iconmenu}}</mat-icon></button></div>
+            <div class="tdoneser2" [ngClass]="{'filterstateinp' : filterstate}" ngClass.lt-sm="tdoneser2ph"><input type="text" minlength="1" (keyup)="serach()" maxlength="255" class="inputsearch" [(ngModel)]="inputsearch" [ngClass]="{'holderinput' : holderinput}" [placeholder]="namemodule"></div>
+            <div class="filtersear" matRipple [matMenuTriggerFor]="menu2" [ngClass]="{'filterstate' : filterstate}" >
+                <span class="material-icons iconfilter">filter_alt</span>
+                <div class="selectitemfilter" *ngIf="rolefilter != ''">{{rolefilter}}</div>
+            </div>
+            <mat-menu #menu2="matMenu">
+                <button mat-menu-item *ngFor="let x of arrControllers" (click)="selectfilter(x)">{{x.name}}</button>
+              </mat-menu>
+            <div class="tdoneser3" ngClass.lt-sm="tdoneser3ph">
+                <div class="itemsrigth" matRipple [matMenuTriggerFor]="menu">
+                    <img [src]="image" class="peoplepng"/>
+                    <div class="nameuser" ngClass.lt-sm="opacitynone">{{fullname}}</div>
+                </div>
+                <mat-menu #menu="matMenu"> 
+                    <button mat-menu-item (click)="logout()">Cerra cession</button>
+                </mat-menu>
+            </div>
+        </div>
+        <div class="conscroll">
+            <router-outlet name="home" class="router"></router-outlet>
+        </div>
+    </div>
+  
+  </mat-drawer-container>

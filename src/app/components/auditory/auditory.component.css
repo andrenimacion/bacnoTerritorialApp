@@ -1,0 +1,194 @@
+.cont{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tbsearch{
+    width: 96%;
+    max-height: 50px;
+    border-collapse:collapse;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.20);
+    box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.20);
+}
+.consearch{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.btnsearch{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    opacity: 0.6;
+    padding: 0px;
+    border-radius: 18px;
+    cursor: pointer;
+}
+.btnsearch:hover{
+    opacity: 1;
+}
+.btnsearch2{
+    background-color: #006b39;
+    color: white;
+    margin: 0px;
+    margin-right: 15px;
+}
+.btniconsearch{
+    margin-top: 10px;
+    font-size: 18px;
+}
+.inputsearch{
+    width: calc(100% - 36px);
+    height: 40px;
+    padding-top: 5px;
+    background: none;
+    outline: none;
+    border: none;
+    color: #333333;
+    font-size: 14px;
+}
+::ng-deep .mat-form-field-underline {
+    display: none;
+  }
+.divi{
+    width: 1px;
+    height: 26px;
+    background-color: #8f8f8f;
+    margin: 10px;
+    margin-top: 13px;
+}
+.tbitems1{
+    border-collapse:collapse;
+    margin-top: 20px;
+    width: 96%;
+    background-color: white;
+    overflow-x: scroll;
+    border-radius: 5px;
+    border: none;
+    -webkit-box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.52);
+-moz-box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.52);
+box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.52);
+}
+.tritems11{
+    background-color: #198754;
+    height: 55px;
+    border-left: 15px solid #198754;
+    border-left: 15px solid #198754;
+}
+.tritems12{
+    cursor: pointer;
+    height: 60px;
+    overflow: hidden;
+}
+.tritems12:hover{
+    background-color: rgb(242, 242, 242);
+}
+.tditems11{
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+}
+.tditems12{
+    text-align: center;
+    font-size: 14px;
+    color: #333333;
+    font-weight: 400;
+}
+.tditems13{
+    display: flex;
+    flex-direction: row;
+    padding-top: 8px;
+    align-items: center;
+}
+.inputselect{
+    margin-bottom: -10px; 
+    width: 100%;
+}
+.inputselectmin{
+    width: 70px; 
+}
+.tdaling{
+    text-align: end;
+}
+.inputedit{
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+.btniconsett{
+
+    transition: all ease-in .2s;
+    opacity: 0.6;
+}
+.btniconsett:hover{
+    opacity: 1;
+}
+.iconsettings{
+    color: #333333;
+    font-size: 20px;
+}
+.searchbtnbar{
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    width: 36px;
+    border-radius: 18px;
+    background-color: #006b39;
+    display: none;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.searchspanbar{
+    margin-top: 2px;
+    font-size: 20px;
+    opacity: 0.8;
+    color: white;
+}
+.btnopacity{
+    display: none;
+}
+.btnvisible{
+    display: flex;
+}
+.adduserbtn{
+    position: fixed;
+bottom: 25px;
+right: 30px;
+background-color: #198754;
+}
+.adduserbtn:hover{
+    background-color: #006b39;
+}
+.divsearch{
+    border-collapse:collapse;
+    margin: 10px 0px;
+    width: 95%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: white;
+    padding: 0px;
+}
+.inputsearch{
+    margin-left: 15px;
+    margin-top: 0px;
+    width: 95%;
+    height: 38px;
+    border: none;
+    outline: none;
+}

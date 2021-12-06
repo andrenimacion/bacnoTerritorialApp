@@ -1,0 +1,355 @@
+.cont{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:  nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.contl{
+    transition: all ease-in .2s;
+    margin-left: 10px;
+    min-width: 94%;
+    height: 90%;
+    margin: 0px 5%;
+    background-color: white;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.12);
+-moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.12);
+box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.12);
+display: flex;
+flex-direction: column;
+overflow: hidden;
+}
+.viewdocument{
+    min-width: 55%;
+    max-width: 55%;
+    margin: 0px 2%;
+}
+.fullscreentpdfl{
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.fullscreentpdfr{
+    min-width: 90%;
+    margin: 0px 5%;
+}
+.contr{
+    width: 40%;
+    height: 90%;
+    background-color: rgba(29, 29, 29, 0.3);
+    border-radius: 5x;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.btniconpdf{
+    opacity: 0.5;
+}
+.btniconpdf:hover{
+    opacity: 1;
+}
+.headerr{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+.bodyr{
+    width: 100%;
+    max-height: calc(100% - 50px);
+}
+.pdfview{
+    width: 100%;
+    height: 100%;
+}
+.namedocument{
+    font-weight: 500;
+    color: #333333;
+    font-size: 16px;
+    margin-left: 15px;
+}
+.hearder{
+    width: 100%;
+    height: 50px;
+    background-color: #198754;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.hearderoptions{
+    width: 100%;
+    height: 50px;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.titlehearder{
+    margin-left: 20px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+}
+.subhearder{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.loading{
+    width: 100%;
+}
+.headerpath{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.pathdirect{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    align-items: center;
+    width: calc(100% - 40px);
+    margin: 0px 5px;
+    overflow: hidden;
+}
+.directoris{
+    padding: 5px;
+    font-size: 14px;
+    color: #555555;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.spacingpath{
+    margin-left: 15px;
+}
+.pathdirect{
+    opacity: 0.8;
+}
+.trtable{
+    width: 100%;
+}
+.iconmenul{
+    margin-right: 2px;
+    margin-bottom: 2px;
+    opacity: 0.7;
+    font-size: 18px;
+}
+.tdtable{
+    width: 100%;
+    overflow: hidden;
+}
+.btnopt{
+    transition: all ease-in .2s;
+    opacity: 0.7;
+}
+.btnopt:hover{
+    opacity: 1;
+}
+.btnopt1{
+    transition: all ease-in .2s;
+    opacity: 0.7;
+}
+.btnopt1:hover{
+    opacity: 1;
+}
+.contfolders{
+    padding: 14px;
+    width: calc(100% - 28px);
+    height: calc(100% - 123px);
+    overflow: scroll;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.itemview{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.textitemview{
+    font-size: 12px;
+    color: #444444;
+}
+.iconitemview{
+   font-size: 19px;
+   color: #555555;
+}
+.btnback{
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.folder{
+    min-width: 104px;
+    max-width: 104px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+}
+@keyframes enteranim {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+.folder:hover{
+    background-color: #f3f1f1fd;
+    opacity: 1;
+}
+.folder:hover > .iconclearfol{
+    opacity: 0.7;
+}
+.iconfolder{
+    width: 50px;
+    opacity: 0.8;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+.iconpdf{
+    width: 50px;
+    opacity: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+.codefolder{
+    margin: 0px 6px;
+    color: #555555;
+    font-size: 11px;
+    letter-spacing: 1px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+.namefolder{
+    text-align: center;
+    height: 40px;
+    margin: 1px 0px;
+    color: #444444;
+    font-size: 11px;
+    letter-spacing: 1px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+.newfolder{
+    min-width: 104px;
+    max-width: 104px;
+    height: 100px;
+    margin: auto;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 1;
+    z-index: 1;
+    position: relative;
+}
+.newfolder:hover{
+    background-color: #ededed;
+}
+.divinnewfolder{
+    text-align: center;
+    max-width: 100px;
+    height: 36px;
+    margin: 1px 0px;
+    color: #444444;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+.innewfolder{
+    border: none;
+    width: 100%;
+    height: auto;
+    outline: none;
+}
+.folderlist{
+    padding: 0px 15px;
+    min-width: calc(48% - 30px);
+    height: 34px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 17px;
+    opacity: 0;
+}
+.folderlistimg{
+    width: 20px;
+    margin-right: 15px;
+}
+.addfolder{
+    display: flex;
+}
+
+
+
+
+::ng-deep .mat-progress-bar-fill::after {
+    background-color: #006335;
+}
+
+::ng-deep .mat-progress-bar-buffer {
+    background: #E4E8EB;
+}
+
+::ng-deep .mat-progress-bar {
+    border-radius: 2px;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    transition: all ease-in .3s;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ededed;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      transition: all ease-in .3s;
+    background: rgb(201, 201, 201);
+    border-radius: 4px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

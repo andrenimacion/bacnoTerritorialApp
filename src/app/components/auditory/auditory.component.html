@@ -1,0 +1,43 @@
+<div class="cont">
+<!--     <table class="tbsearch"><tr  style="height: 50px;">
+      <td>
+        <div class="consearch">
+        <input type="text"  (keyup)="search()" class="inputsearch" placeholder="Escribe aqui" [formControl]="input" minlength="1" maxlength="30">
+        <div class="btnsearch" (click)="deleteinputsarch()" matRipple><mat-icon class="btniconsearch">clear</mat-icon></div>
+        </div>
+      </td>
+      <td><div class="divi"></div></td>
+      <td>
+        <mat-form-field class="inputselect" ngClass.lt-sm="inputselectmin">
+          <mat-label>Selecione filtro</mat-label>
+               <mat-select [formControl]="select">
+                 <mat-option *ngFor="let item of arrControllers" [value]="item">
+                   {{item}}
+                 </mat-option>
+               </mat-select>
+          </mat-form-field>
+      </td>
+      <td class="tdaling">
+        <button  (click)="search()" ngClass.lt-sm="btnopacity" mat-button class="btnsearch2">Buscar</button>
+        <div matRipple (click)="search()" class="searchbtnbar" ngClass.lt-sm="btnvisible" ><mat-icon class="searchspanbar">search</mat-icon></div>
+      </td>
+    </tr></table> -->
+    <table class="tbitems1">
+        <tr class="tritems11">
+            <td class="tditems11">Nombre</td>
+            <td class="tditems11">Rol</td>
+            <td class="tditems11">Fecha</td>
+            <td class="tditems11">Dato</td>
+            <td class="tditems11"></td>
+        </tr>
+        <tr class="tritems12" *ngFor="let x of data">
+            <td class="tditems12">{{x.user_name}}</td>
+            <td class="tditems12"> {{x.rol_user}} </td>
+            <td class="tditems12"> {{x.dates | date: 'short'}}</td>
+            <td class="tditems12"> {{x.data_add + " " + x.name_audit }} </td>
+            <td class="tditems13">
+              <button mat-icon-button class="btniconsett"><span class="material-icons iconsettings">clear</span></button>
+            </td>
+        </tr>
+        </table>
+</div>

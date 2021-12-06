@@ -1,0 +1,53 @@
+<div class="cont" [ngClass]="{'fullscreentpdfl' : fullscreentpdf}">
+    <div class="contl" [ngClass]="{'viewdocument' : viewdocument}" [ngClass]="{'fullscreentpdfr' : fullscreentpdf}">
+        <div class="hearder">
+            <div class="titlehearder">{{namefolder}}</div>
+        </div>
+        <mat-progress-bar class="loading" *ngIf="loading" mode="query"></mat-progress-bar>
+        <div class="hearderoptions">
+            <button (click)="addfolder()" class="btnopt1" mat-button>Agregar</button>
+            <button [matMenuTriggerFor]="menu" class="btnopt" mat-button> 
+                <span class="material-icons iconmenul">{{viewicon}}</span>
+                Vista
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item class="itemview" (click)="selectview(false)">
+                    <span class="textitemview">Lista</span>
+                    <span class="material-icons iconitemview">format_list_bulleted</span>
+                </button>
+                <button mat-menu-item class="itemview" (click)="selectview(true)">
+                    <span class="textitemview">Iconos</span>
+                    <span class="material-icons iconitemview">view_module</span>
+                </button>
+                </mat-menu>
+               <button (click)="changeroder()" class="btnopt1" mat-button>{{order}} Orden</button>
+        </div> 
+        <div class="headerpath">
+            <div matRipple (click)="returnfolder()" *ngIf="arrpaths[0]" class="btnback"><span class="material-icons">chevron_left</span></div>
+            <div class="pathdirect" id="idpath">
+                <div matRipple class="directoris" *ngFor="let x of arrpaths" (click)="loadfolderpath(x.code,x.index)">{{x.name}}/</div>
+            </div>
+        </div>
+        <div class="contfolders">
+            <div class="newfolder" [ngClass]="{'folderlist' : folderview}" [ngClass]="{'addfolder' : varaddfolder}">
+                <img  [ngClass]="{'folderlistimg' : folderview}"  src="../../../assets/folder-min.png" class="iconfolder"> 
+                <div class="divinnewfolder"><textarea type="text" (keyup.enter)="savefolder()" (focusout)="savefolder()" class="innewfolder" placeholder="Nueva carpeta"  id="inputaddfolder" ></textarea></div>
+            </div>
+            <div class="folder" [ngClass]="{'folderlist' : folderview}"  *ngFor="let folder of folders" title="{{folder.nombre}}" id="{{ folder.id }}"  (click)="selectfolder(folder.codigo, folder.nombre, folder.lencond)">
+                <img *ngIf="folder.lencond == 1" [ngClass]="{'folderlistimg' : folderview}"  src="../../../assets/pdf-min.png" class="iconpdf">
+                <img *ngIf="folder.lencond == 0" [ngClass]="{'folderlistimg' : folderview}"  src="../../../assets/folder-min.png" class="iconfolder"> 
+                <div class="namefolder" >{{folder.nombre}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="contr" [ngClass]="{'fullscreentpdfr' : fullscreentpdf}">
+        <div class="headerr">
+            <div class="namedocument">{{namedocument}}</div>
+            <div>
+                <button class="btniconpdf" (click)="funfullscreenpdf()" mat-icon-button aria-label="Example icon button with a vertical three dot icon"><mat-icon>fullscreen </mat-icon></button>
+                <button class="btniconpdf" (click)="closedpdf()" mat-icon-button aria-label="Example icon button with a vertical three dot icon"><mat-icon>clear</mat-icon></button>
+            </div>
+        </div>
+        <pdf-viewer [src]="pdfSrc" [autoresize]="true" [render-text]="true" [original-size]="false" class="pdfview"></pdf-viewer>
+    </div>
+</div>

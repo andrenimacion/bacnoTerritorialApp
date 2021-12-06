@@ -1,0 +1,49 @@
+<div class="cont">
+    <mat-form-field class="inputs" hintLabel="Max 50 characters" appearance="fill">
+        <mat-label>Nombre Usuario:</mat-label>
+        <input matInput #input maxlength="50" [(ngModel)]="_name_user" placeholder="Ernesto Echev...">
+        <mat-hint align="end">{{input.value?.length || 0}}/50</mat-hint>
+    </mat-form-field>
+
+        <mat-form-field appearance="fill" class="inputs">
+          <mat-label>Ingresa un email:</mat-label>
+          <input matInput placeholder="pat@example.com" [(ngModel)]="_email_user" [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+
+    <mat-form-field class="inputs" hintLabel="Número de celular o contácto" appearance="fill">
+        <mat-label>Teléfono:</mat-label>
+        <input  matInput #inputNumber type="number" [(ngModel)]="_telf_user" placeholder="09123456789">
+    </mat-form-field>
+    
+    <mat-form-field class="inputs" appearance="fill">
+        <mat-label>Ingresa una contraseña:</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'"  [(ngModel)]="_pass_user">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+    </mat-form-field>  
+    <mat-form-field appearance="fill" class="inputs2">
+        <mat-label>Selecione un rol</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let _roles of arrRolesGen" [value]="_roles.nombre" (click)="catchData(_roles.nombre)">{{_roles.nombre}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="inputs2">
+        <mat-label>Selecione un@ secr5etaria</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let scret of arrSecret" [value]="scret.nombre" (click)="catchDataB(scret.nombre)">{{scret.nombre}}
+          </mat-option> 
+        </mat-select>
+      </mat-form-field>
+      <input id="img" type="file">
+        <div style="margin-top: 10px;">
+            <button mat-button class="btnagg" (click)="sUsers( _name_user,
+            _roles_user,
+            _email_user,                                   
+            '---',
+            _pass_user); aud( 'Creo Usuario' )">Agregar</button>
+            <button mat-button class="btncan" (click)="onNoClick()">Cancelar</button>
+        </div>
+</div>

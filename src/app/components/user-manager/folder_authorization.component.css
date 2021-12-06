@@ -1,0 +1,104 @@
+*{
+    padding: 0px;
+}
+.cont{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.headerl{
+    display: flex;
+    flex-direction: column;
+}   
+.texttile{
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+}
+.subtitle{
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333333;
+}
+.body{
+    width: 100%;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+.tbitems1{
+    min-height: 100%;
+    border-collapse:collapse;
+    margin-top: 14px;
+    width: 96%;
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+}
+.tritems11{
+    background-color: #ededed;
+    height: 55px;
+    border-left: 5px solid #ededed;
+    border-left: 5px solid #ededed;
+}
+.tritems12{
+    cursor: pointer;
+    height: 60px;
+    overflow: hidden;
+}
+.tritems12:hover{
+    background-color: rgb(242, 242, 242);
+}
+.tditems11{
+    text-align: center;
+    font-size: 13px;
+    color: rgb(58, 58, 58);
+    font-weight: 500;
+}
+.tditems12{
+    font-size: 13px;
+    color: #333333;
+    font-weight: 400;
+}
+.btniconaut{
+    opacity: 0.5;
+}
+.btniconaut:hover{
+    opacity: 1;
+}
+.tditems13{
+    display: flex;
+    flex-direction: row;
+    padding-top: 8px;
+    align-items: center;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    transition: all ease-in .3s;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ededed;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      transition: all ease-in .3s;
+    background: rgb(201, 201, 201);
+    border-radius: 4px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

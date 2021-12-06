@@ -1,0 +1,27 @@
+<div class="cont">
+    <div class="subcont" ngClass.lt-sm="subcontph" [class.subcontanit]="show">
+        <div class="subcontl">
+            <img src="https://www.pngrepo.com/png/226113/512/folder-files-and-folders.png" class="logo">
+            <div class="textlogo">Banco Territorial</div>
+        </div>
+        <div class="subcontf">
+            <div class="titleform">Ingresa</div>
+            <form [formGroup]="login" class="form">
+                <mat-form-field class="inputsh">
+                    <mat-label>Usuario</mat-label>
+                    <input type="text" matInput formControlName="st_email" placeholder="Administrador">
+                    <mat-error *ngIf="login.controls['st_email'].hasError('required')">El usuario es requerida </mat-error>
+                </mat-form-field>
+                <mat-form-field class="inputsh">
+                    <mat-label>Contraseña</mat-label>
+                    <input [type]="hide ? 'password' : 'text'" (keyup.enter)="logeo()" matInput formControlName="st_password_user" placeholder="123456">
+                    <mat-error *ngIf="login.controls['st_password_user'].hasError('required')">La contraseña es requerida </mat-error>
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+                <button mat-flat-button class="btnlogin" (click)="logeo()">Ingresar</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,150 @@
+.cont{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contable{
+    margin-top: 20px;
+    width: 96%;
+    background-color: white;
+    -webkit-box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.52);
+    -moz-box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.52);
+    box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.52);
+    border-radius: 5px;
+}
+.contableh{
+    width: 100%;
+    height: 50px;
+}
+.peoplefile{
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    margin: 0px 10px;
+    background-color: rgb(240, 240, 240);
+}
+.tbitems1{
+    border-collapse:collapse;
+    width: 100%;
+    overflow-x: scroll;
+    border: none;
+}
+.tritems11{
+    background-color: #198754;
+    height: 55px;
+    border-left: 15px solid #198754;
+    border-left: 15px solid #198754;
+}
+.tritems12{
+    cursor: pointer;
+    height: 60px;
+    overflow: hidden;
+}
+.tritems12:hover{
+    background-color: rgb(242, 242, 242);
+}
+.tditems11{
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+}
+.tditems12{
+    text-align: center;
+    font-size: 14px;
+    color: #333333;
+    font-weight: 400;
+}
+.tditems13{
+    display: flex;
+    flex-direction: row;
+    padding-top: 8px;
+    align-items: center;
+}
+.inputedit{
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+.btniconsett{
+
+    transition: all ease-in .2s;
+    opacity: 0.6;
+}
+.btniconsett:hover{
+    opacity: 1;
+}
+.iconsettings{
+    color: #333333;
+    font-size: 20px;
+}
+.adduserbtn{
+    position: fixed;
+bottom: 25px;
+right: 30px;
+background-color: #198754;
+}
+.adduserbtn:hover{
+    background-color: #006b39;
+}
+.tbsearch{
+    width: 96%;
+    max-height: 50px;
+    border-collapse:collapse;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.20);
+    box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.20);
+}
+.trsearch{
+    height: 50px
+}
+.consearch{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.inputsearch{
+    width: calc(100% - 60px);
+    height: 40px;
+    padding-top: 5px;
+    margin-left: 17px;
+    background: none;
+    outline: none;
+    border: none;
+    color: #333333;
+    font-size: 14px;
+}
+.btnsearch{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    opacity: 0.6;
+    padding: 0px;
+    border-radius: 18px;
+    cursor: pointer;
+}
+.btniconsearch{
+    margin-top: 10px;
+    font-size: 18px;
+}
+.tdaling{
+    width: 80px;
+    text-align: end;
+}
+.btnsearch2{
+    background-color: #006b39;
+    color: white;
+    margin: 0px;
+    margin-right: 10px;
+}

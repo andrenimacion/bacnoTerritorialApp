@@ -1,0 +1,29 @@
+<div class="cont">
+    <div class="header">
+        <div class="headerl">
+            <div class="texttile">Autorizacion de carpetas</div>
+            <div class="subtitle">usuario: <strong>{{name}}/{{rol}}</strong></div>
+        </div>
+        <div class="headerr">
+            <button (click)="closed()" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                <mat-icon>clear</mat-icon>
+              </button>
+        </div>
+    </div>
+    <div class="body">
+        <table class="tbitems1">
+            <tr class="tritems11">
+                <td class="tditems11">Nombre</td>
+                <td class="tditems11">codigo</td>
+                <td class="tditems11"></td>
+            </tr>
+            <tr class="tritems12" *ngFor="let x of folders">
+                <td class="tditems12">{{x.nombre}}</td>
+                <td> {{x.codigo}} </td>
+                <td>
+                  <button mat-icon-button class="btniconaut"><span class="material-icons iconsettings">folder_off</span></button>
+                </td>
+            </tr>
+            </table>
+    </div>
+</div>
